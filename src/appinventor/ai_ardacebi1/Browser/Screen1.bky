@@ -1,0 +1,2147 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1" x="518" y="-3016">
+    <mutation component_type="Form" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_if" id="2" inline="false">
+        <value name="IF0">
+          <block type="math_compare" id="3">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="component_method" id="4" inline="false">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="5">
+                    <field name="TEXT">firstsetup</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="6">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="7">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="8" inline="false">
+            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+            <value name="ARG0">
+              <block type="text" id="9">
+                <field name="TEXT">background</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="color_black" id="10">
+                <field name="COLOR">#ffffff</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="11" inline="false">
+                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="12">
+                    <field name="TEXT">firstsetup</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="math_number" id="13">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="component_set_get" id="14" inline="false">
+            <mutation component_type="Form" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="Screen1"></mutation>
+            <field name="COMPONENT_SELECTOR">Screen1</field>
+            <field name="PROP">BackgroundColor</field>
+            <value name="VALUE">
+              <block type="component_method" id="15" inline="false">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="16">
+                    <field name="TEXT">background</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="17">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="18" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="math_compare" id="19">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="20">
+                        <mutation component_type="Form" set_or_get="get" property_name="BackgroundColor" is_generic="false" instance_name="Screen1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Screen1</field>
+                        <field name="PROP">BackgroundColor</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="color_black" id="21">
+                        <field name="COLOR">#000000</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_set_get" id="22" inline="false">
+                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="GoButton"></mutation>
+                    <field name="COMPONENT_SELECTOR">GoButton</field>
+                    <field name="PROP">Image</field>
+                    <value name="VALUE">
+                      <block type="text" id="23">
+                        <field name="TEXT">Go-w.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="24" inline="false">
+                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="SettingsButton"></mutation>
+                        <field name="COMPONENT_SELECTOR">SettingsButton</field>
+                        <field name="PROP">Image</field>
+                        <value name="VALUE">
+                          <block type="text" id="25">
+                            <field name="TEXT">settings-w.png</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="26" inline="false">
+                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="Reload_Button"></mutation>
+                            <field name="COMPONENT_SELECTOR">Reload_Button</field>
+                            <field name="PROP">Image</field>
+                            <value name="VALUE">
+                              <block type="text" id="27">
+                                <field name="TEXT">Reload-w.png</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="28" inline="false">
+                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="AboutButton"></mutation>
+                                <field name="COMPONENT_SELECTOR">AboutButton</field>
+                                <field name="PROP">Image</field>
+                                <value name="VALUE">
+                                  <block type="text" id="29">
+                                    <field name="TEXT">info-w.png</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="30" inline="false">
+                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="BackButton"></mutation>
+                                    <field name="COMPONENT_SELECTOR">BackButton</field>
+                                    <field name="PROP">Image</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="31">
+                                        <field name="TEXT">back-w.png</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="32" inline="false">
+                                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ForwardButton"></mutation>
+                                        <field name="COMPONENT_SELECTOR">ForwardButton</field>
+                                        <field name="PROP">Image</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="33">
+                                            <field name="TEXT">Go-w.png</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="34" inline="false">
+                                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ShareButton"></mutation>
+                                            <field name="COMPONENT_SELECTOR">ShareButton</field>
+                                            <field name="PROP">Image</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="35">
+                                                <field name="TEXT">share-w.png</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_set_get" id="36" inline="false">
+                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="GoButton"></mutation>
+                    <field name="COMPONENT_SELECTOR">GoButton</field>
+                    <field name="PROP">Image</field>
+                    <value name="VALUE">
+                      <block type="text" id="37">
+                        <field name="TEXT">Go-d.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="38" inline="false">
+                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="SettingsButton"></mutation>
+                        <field name="COMPONENT_SELECTOR">SettingsButton</field>
+                        <field name="PROP">Image</field>
+                        <value name="VALUE">
+                          <block type="text" id="39">
+                            <field name="TEXT">settings-d.png</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="40" inline="false">
+                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="Reload_Button"></mutation>
+                            <field name="COMPONENT_SELECTOR">Reload_Button</field>
+                            <field name="PROP">Image</field>
+                            <value name="VALUE">
+                              <block type="text" id="41">
+                                <field name="TEXT">Reload-d.png</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="42" inline="false">
+                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="AboutButton"></mutation>
+                                <field name="COMPONENT_SELECTOR">AboutButton</field>
+                                <field name="PROP">Image</field>
+                                <value name="VALUE">
+                                  <block type="text" id="43">
+                                    <field name="TEXT">info-d.png</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="44" inline="false">
+                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="BackButton"></mutation>
+                                    <field name="COMPONENT_SELECTOR">BackButton</field>
+                                    <field name="PROP">Image</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="45">
+                                        <field name="TEXT">back-d.png</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="46" inline="false">
+                                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ForwardButton"></mutation>
+                                        <field name="COMPONENT_SELECTOR">ForwardButton</field>
+                                        <field name="PROP">Image</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="47">
+                                            <field name="TEXT">Go-d.png</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="48" inline="false">
+                                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ShareButton"></mutation>
+                                            <field name="COMPONENT_SELECTOR">ShareButton</field>
+                                            <field name="PROP">Image</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="49">
+                                                <field name="TEXT">share-d.png</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="50" inline="false">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="math_compare" id="51">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_method" id="52" inline="false">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="53">
+                                <field name="TEXT">ignoresslerrors</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text" id="54">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id="55">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_set_get" id="56" inline="false">
+                        <mutation component_type="WebViewer" set_or_get="set" property_name="IgnoreSslErrors" is_generic="false" instance_name="WebViewer1"></mutation>
+                        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                        <field name="PROP">IgnoreSslErrors</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="57">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="controls_if" id="58" inline="false">
+                        <value name="IF0">
+                          <block type="math_compare" id="59">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="component_method" id="60" inline="false">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="61">
+                                    <field name="TEXT">ignoresslerrors</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="62">
+                                    <field name="TEXT"></field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_boolean" id="63">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="component_set_get" id="64" inline="false">
+                            <mutation component_type="WebViewer" set_or_get="set" property_name="IgnoreSslErrors" is_generic="false" instance_name="WebViewer1"></mutation>
+                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                            <field name="PROP">IgnoreSslErrors</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="65">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="66" inline="false">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="math_compare" id="67">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="component_method" id="68" inline="false">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="69">
+                                    <field name="TEXT">pfp</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="70">
+                                    <field name="TEXT"></field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_boolean" id="71">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="component_set_get" id="72" inline="false">
+                            <mutation component_type="WebViewer" set_or_get="set" property_name="PromptforPermission" is_generic="false" instance_name="WebViewer1"></mutation>
+                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                            <field name="PROP">PromptforPermission</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="73">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="controls_if" id="74" inline="false">
+                            <value name="IF0">
+                              <block type="math_compare" id="75">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="component_method" id="76" inline="false">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="77">
+                                        <field name="TEXT">pfp</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="78">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_boolean" id="79">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="component_set_get" id="80" inline="false">
+                                <mutation component_type="WebViewer" set_or_get="set" property_name="PromptforPermission" is_generic="false" instance_name="WebViewer1"></mutation>
+                                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                <field name="PROP">PromptforPermission</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="81">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="82" inline="false">
+                            <mutation else="1"></mutation>
+                            <value name="IF0">
+                              <block type="math_compare" id="83">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="component_method" id="84" inline="false">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="85">
+                                        <field name="TEXT">showstatusbar</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="86">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_boolean" id="87">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="component_set_get" id="88" inline="false">
+                                <mutation component_type="Form" set_or_get="set" property_name="ShowStatusBar" is_generic="false" instance_name="Screen1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Screen1</field>
+                                <field name="PROP">ShowStatusBar</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="89">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="component_set_get" id="90" inline="false">
+                                <mutation component_type="Form" set_or_get="set" property_name="ShowStatusBar" is_generic="false" instance_name="Screen1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Screen1</field>
+                                <field name="PROP">ShowStatusBar</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="91">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="92" inline="false">
+                                <mutation else="1"></mutation>
+                                <value name="IF0">
+                                  <block type="math_compare" id="93">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="component_method" id="94" inline="false">
+                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                        <value name="ARG0">
+                                          <block type="text" id="95">
+                                            <field name="TEXT">defaultsearchengine</field>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="text" id="96">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="text" id="97">
+                                        <field name="TEXT">Google</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="component_set_get" id="98" inline="false">
+                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                    <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                    <field name="PROP">Image</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="99">
+                                        <field name="TEXT">googlelogo.png</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="100" inline="false">
+                                        <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                        <field name="PROP">HomeUrl</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="101">
+                                            <field name="TEXT">http://google.com</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block type="controls_if" id="102" inline="false">
+                                    <mutation else="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="math_compare" id="103">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="component_method" id="104" inline="false">
+                                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                            <value name="ARG0">
+                                              <block type="text" id="105">
+                                                <field name="TEXT">defaultsearchengine</field>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="text" id="106">
+                                                <field name="TEXT"></field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="107">
+                                            <field name="TEXT">Bing</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="component_set_get" id="108" inline="false">
+                                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                        <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                        <field name="PROP">Image</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="109">
+                                            <field name="TEXT">binglogo.png</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="110" inline="false">
+                                            <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                            <field name="PROP">HomeUrl</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="111">
+                                                <field name="TEXT">http://bing.com</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <statement name="ELSE">
+                                      <block type="controls_if" id="112" inline="false">
+                                        <mutation else="1"></mutation>
+                                        <value name="IF0">
+                                          <block type="math_compare" id="113">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="component_method" id="114" inline="false">
+                                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                                <value name="ARG0">
+                                                  <block type="text" id="115">
+                                                    <field name="TEXT">defaultsearchengine</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ARG1">
+                                                  <block type="text" id="116">
+                                                    <field name="TEXT"></field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="text" id="117">
+                                                <field name="TEXT">Yandex</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="component_set_get" id="118" inline="false">
+                                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                            <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                            <field name="PROP">Image</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="119">
+                                                <field name="TEXT">yandexlogo.png</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="120" inline="false">
+                                                <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                                <field name="PROP">HomeUrl</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="121">
+                                                    <field name="TEXT">http://yandex.com</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <statement name="ELSE">
+                                          <block type="controls_if" id="122" inline="false">
+                                            <mutation else="1"></mutation>
+                                            <value name="IF0">
+                                              <block type="math_compare" id="123">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="component_method" id="124" inline="false">
+                                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                                    <value name="ARG0">
+                                                      <block type="text" id="125">
+                                                        <field name="TEXT">defaultsearchengine</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ARG1">
+                                                      <block type="text" id="126">
+                                                        <field name="TEXT"></field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="text" id="127">
+                                                    <field name="TEXT">Yahoo</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="component_set_get" id="128" inline="false">
+                                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                                <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                                <field name="PROP">Image</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="129">
+                                                    <field name="TEXT">yahoologo.png</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="component_set_get" id="130" inline="false">
+                                                    <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                                    <field name="PROP">HomeUrl</field>
+                                                    <value name="VALUE">
+                                                      <block type="text" id="131">
+                                                        <field name="TEXT">http://yahoo.com</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                            <statement name="ELSE">
+                                              <block type="controls_if" id="132" inline="false">
+                                                <value name="IF0">
+                                                  <block type="math_compare" id="133">
+                                                    <field name="OP">EQ</field>
+                                                    <value name="A">
+                                                      <block type="component_method" id="134" inline="false">
+                                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                                        <value name="ARG0">
+                                                          <block type="text" id="135">
+                                                            <field name="TEXT">defaultsearchengine</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ARG1">
+                                                          <block type="text" id="136">
+                                                            <field name="TEXT"></field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="text" id="137">
+                                                        <field name="TEXT">DuckDuckGo</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                  <block type="component_set_get" id="138" inline="false">
+                                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                                    <field name="PROP">Image</field>
+                                                    <value name="VALUE">
+                                                      <block type="text" id="139">
+                                                        <field name="TEXT">Ducklogo.png</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="component_set_get" id="140" inline="false">
+                                                        <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                                        <field name="PROP">HomeUrl</field>
+                                                        <value name="VALUE">
+                                                          <block type="text" id="141">
+                                                            <field name="TEXT">http://duckduckgo.com</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </statement>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="142" inline="false">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="143">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="component_method" id="144" inline="false">
+                                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                            <value name="ARG0">
+                                              <block type="text" id="145">
+                                                <field name="TEXT">clearcache</field>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="text" id="146">
+                                                <field name="TEXT"></field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="logic_boolean" id="147">
+                                            <field name="BOOL">TRUE</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="component_method" id="148">
+                                        <mutation component_type="WebViewer" method_name="ClearCaches" is_generic="false" instance_name="WebViewer1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                        <next>
+                                          <block type="component_method" id="149" inline="false">
+                                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                            <value name="ARG0">
+                                              <block type="text" id="150">
+                                                <field name="TEXT">clearcache</field>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="logic_boolean" id="151">
+                                                <field name="BOOL">FALSE</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="component_set_get" id="152" inline="false">
+                                        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="component_set_get" id="153">
+                                            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                            <field name="PROP">CurrentUrl</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_method" id="G8pKM#8mMyD`_p~6l9zz">
+                                            <mutation component_type="TinyWebDB" method_name="GetValue" is_generic="false" instance_name="TinyWebDB1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">TinyWebDB1</field>
+                                            <value name="ARG0">
+                                              <block type="text" id="d(P/}3[cTX7^u`}*Q~Q;">
+                                                <field name="TEXT">updateavailability-coby234232221qZWPOA</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="154" x="-257" y="-1780">
+    <mutation component_type="Form" instance_name="Screen1" event_name="OtherScreenClosed"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="155" inline="false">
+        <mutation component_type="Form" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="Screen1"></mutation>
+        <field name="COMPONENT_SELECTOR">Screen1</field>
+        <field name="PROP">BackgroundColor</field>
+        <value name="VALUE">
+          <block type="component_method" id="156" inline="false">
+            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+            <value name="ARG0">
+              <block type="text" id="157">
+                <field name="TEXT">background</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="158">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="159" inline="false">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="math_compare" id="160">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="161">
+                    <mutation component_type="Form" set_or_get="get" property_name="BackgroundColor" is_generic="false" instance_name="Screen1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Screen1</field>
+                    <field name="PROP">BackgroundColor</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="color_black" id="162">
+                    <field name="COLOR">#000000</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="163" inline="false">
+                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="GoButton"></mutation>
+                <field name="COMPONENT_SELECTOR">GoButton</field>
+                <field name="PROP">Image</field>
+                <value name="VALUE">
+                  <block type="text" id="164">
+                    <field name="TEXT">Go-w.png</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="165" inline="false">
+                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="SettingsButton"></mutation>
+                    <field name="COMPONENT_SELECTOR">SettingsButton</field>
+                    <field name="PROP">Image</field>
+                    <value name="VALUE">
+                      <block type="text" id="166">
+                        <field name="TEXT">settings-w.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="167" inline="false">
+                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="Reload_Button"></mutation>
+                        <field name="COMPONENT_SELECTOR">Reload_Button</field>
+                        <field name="PROP">Image</field>
+                        <value name="VALUE">
+                          <block type="text" id="168">
+                            <field name="TEXT">Reload-w.png</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="169" inline="false">
+                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="AboutButton"></mutation>
+                            <field name="COMPONENT_SELECTOR">AboutButton</field>
+                            <field name="PROP">Image</field>
+                            <value name="VALUE">
+                              <block type="text" id="170">
+                                <field name="TEXT">info-w.png</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="171" inline="false">
+                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="BackButton"></mutation>
+                                <field name="COMPONENT_SELECTOR">BackButton</field>
+                                <field name="PROP">Image</field>
+                                <value name="VALUE">
+                                  <block type="text" id="172">
+                                    <field name="TEXT">back-w.png</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="173" inline="false">
+                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ForwardButton"></mutation>
+                                    <field name="COMPONENT_SELECTOR">ForwardButton</field>
+                                    <field name="PROP">Image</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="174">
+                                        <field name="TEXT">Go-w.png</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="175" inline="false">
+                                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ShareButton"></mutation>
+                                        <field name="COMPONENT_SELECTOR">ShareButton</field>
+                                        <field name="PROP">Image</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="176">
+                                            <field name="TEXT">share-w.png</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_set_get" id="177" inline="false">
+                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="GoButton"></mutation>
+                <field name="COMPONENT_SELECTOR">GoButton</field>
+                <field name="PROP">Image</field>
+                <value name="VALUE">
+                  <block type="text" id="178">
+                    <field name="TEXT">Go-d.png</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="179" inline="false">
+                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="SettingsButton"></mutation>
+                    <field name="COMPONENT_SELECTOR">SettingsButton</field>
+                    <field name="PROP">Image</field>
+                    <value name="VALUE">
+                      <block type="text" id="180">
+                        <field name="TEXT">settings-d.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="181" inline="false">
+                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="Reload_Button"></mutation>
+                        <field name="COMPONENT_SELECTOR">Reload_Button</field>
+                        <field name="PROP">Image</field>
+                        <value name="VALUE">
+                          <block type="text" id="182">
+                            <field name="TEXT">Reload-d.png</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="183" inline="false">
+                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="AboutButton"></mutation>
+                            <field name="COMPONENT_SELECTOR">AboutButton</field>
+                            <field name="PROP">Image</field>
+                            <value name="VALUE">
+                              <block type="text" id="184">
+                                <field name="TEXT">info-d.png</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="185" inline="false">
+                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="BackButton"></mutation>
+                                <field name="COMPONENT_SELECTOR">BackButton</field>
+                                <field name="PROP">Image</field>
+                                <value name="VALUE">
+                                  <block type="text" id="186">
+                                    <field name="TEXT">back-d.png</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="187" inline="false">
+                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ForwardButton"></mutation>
+                                    <field name="COMPONENT_SELECTOR">ForwardButton</field>
+                                    <field name="PROP">Image</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="188">
+                                        <field name="TEXT">Go-d.png</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="189" inline="false">
+                                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="ShareButton"></mutation>
+                                        <field name="COMPONENT_SELECTOR">ShareButton</field>
+                                        <field name="PROP">Image</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="190">
+                                            <field name="TEXT">share-d.png</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="component_set_get" id="191" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="component_set_get" id="192">
+                    <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                    <field name="PROP">CurrentUrl</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="193" inline="false">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="math_compare" id="194">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_method" id="195" inline="false">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="196">
+                                <field name="TEXT">showstatusbar</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text" id="197">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_boolean" id="198">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_set_get" id="199" inline="false">
+                        <mutation component_type="Form" set_or_get="set" property_name="ShowStatusBar" is_generic="false" instance_name="Screen1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Screen1</field>
+                        <field name="PROP">ShowStatusBar</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="200">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_set_get" id="201" inline="false">
+                        <mutation component_type="Form" set_or_get="set" property_name="ShowStatusBar" is_generic="false" instance_name="Screen1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Screen1</field>
+                        <field name="PROP">ShowStatusBar</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="202">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="203" inline="false">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="math_compare" id="204">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="component_method" id="205" inline="false">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="206">
+                                    <field name="TEXT">ignoresslerrors</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="207">
+                                    <field name="TEXT"></field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_boolean" id="208">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="component_set_get" id="209" inline="false">
+                            <mutation component_type="WebViewer" set_or_get="set" property_name="IgnoreSslErrors" is_generic="false" instance_name="WebViewer1"></mutation>
+                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                            <field name="PROP">IgnoreSslErrors</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="210">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="controls_if" id="211" inline="false">
+                            <value name="IF0">
+                              <block type="math_compare" id="212">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="component_method" id="213" inline="false">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="214">
+                                        <field name="TEXT">ignoresslerrors</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="215">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_boolean" id="216">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="component_set_get" id="217" inline="false">
+                                <mutation component_type="WebViewer" set_or_get="set" property_name="IgnoreSslErrors" is_generic="false" instance_name="WebViewer1"></mutation>
+                                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                <field name="PROP">IgnoreSslErrors</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="218">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="219" inline="false">
+                            <mutation else="1"></mutation>
+                            <value name="IF0">
+                              <block type="math_compare" id="220">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="component_method" id="221" inline="false">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="222">
+                                        <field name="TEXT">defaultsearchengine</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="223">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="text" id="224">
+                                    <field name="TEXT">Google</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="component_set_get" id="225" inline="false">
+                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                <field name="PROP">Image</field>
+                                <value name="VALUE">
+                                  <block type="text" id="226">
+                                    <field name="TEXT">googlelogo.png</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="227" inline="false">
+                                    <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                    <field name="PROP">HomeUrl</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="228">
+                                        <field name="TEXT">http://google.com</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="controls_if" id="229" inline="false">
+                                <mutation else="1"></mutation>
+                                <value name="IF0">
+                                  <block type="math_compare" id="230">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="component_method" id="231" inline="false">
+                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                        <value name="ARG0">
+                                          <block type="text" id="232">
+                                            <field name="TEXT">defaultsearchengine</field>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="text" id="233">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="text" id="234">
+                                        <field name="TEXT">Bing</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="component_set_get" id="235" inline="false">
+                                    <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                    <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                    <field name="PROP">Image</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="236">
+                                        <field name="TEXT">binglogo.png</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="237" inline="false">
+                                        <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                        <field name="PROP">HomeUrl</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="238">
+                                            <field name="TEXT">http://bing.com</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block type="controls_if" id="239" inline="false">
+                                    <mutation else="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="math_compare" id="240">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="component_method" id="241" inline="false">
+                                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                            <value name="ARG0">
+                                              <block type="text" id="242">
+                                                <field name="TEXT">defaultsearchengine</field>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="text" id="243">
+                                                <field name="TEXT"></field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="244">
+                                            <field name="TEXT">Yandex</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="component_set_get" id="245" inline="false">
+                                        <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                        <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                        <field name="PROP">Image</field>
+                                        <value name="VALUE">
+                                          <block type="text" id="246">
+                                            <field name="TEXT">yandexlogo.png</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="247" inline="false">
+                                            <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                            <field name="PROP">HomeUrl</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="248">
+                                                <field name="TEXT">http://yandex.com</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <statement name="ELSE">
+                                      <block type="controls_if" id="249" inline="false">
+                                        <mutation else="1"></mutation>
+                                        <value name="IF0">
+                                          <block type="math_compare" id="250">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="component_method" id="251" inline="false">
+                                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                                <value name="ARG0">
+                                                  <block type="text" id="252">
+                                                    <field name="TEXT">defaultsearchengine</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ARG1">
+                                                  <block type="text" id="253">
+                                                    <field name="TEXT"></field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="text" id="254">
+                                                <field name="TEXT">Yahoo</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="component_set_get" id="255" inline="false">
+                                            <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                            <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                            <field name="PROP">Image</field>
+                                            <value name="VALUE">
+                                              <block type="text" id="256">
+                                                <field name="TEXT">yahoologo.png</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="257" inline="false">
+                                                <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                                <field name="PROP">HomeUrl</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="258">
+                                                    <field name="TEXT">http://yahoo.com</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <statement name="ELSE">
+                                          <block type="controls_if" id="259" inline="false">
+                                            <mutation else="1"></mutation>
+                                            <value name="IF0">
+                                              <block type="math_compare" id="260">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="component_method" id="261" inline="false">
+                                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                                    <value name="ARG0">
+                                                      <block type="text" id="262">
+                                                        <field name="TEXT">defaultsearchengine</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ARG1">
+                                                      <block type="text" id="263">
+                                                        <field name="TEXT"></field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="text" id="264">
+                                                    <field name="TEXT">DuckDuckGo</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="component_set_get" id="265" inline="false">
+                                                <mutation component_type="Button" set_or_get="set" property_name="Image" is_generic="false" instance_name="search_engine_button"></mutation>
+                                                <field name="COMPONENT_SELECTOR">search_engine_button</field>
+                                                <field name="PROP">Image</field>
+                                                <value name="VALUE">
+                                                  <block type="text" id="266">
+                                                    <field name="TEXT">Ducklogo.png</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="component_set_get" id="267" inline="false">
+                                                    <mutation component_type="WebViewer" set_or_get="set" property_name="HomeUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                                    <field name="PROP">HomeUrl</field>
+                                                    <value name="VALUE">
+                                                      <block type="text" id="268">
+                                                        <field name="TEXT">http://duckduckgo.com</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </statement>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="269" inline="false">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="270">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="component_method" id="271" inline="false">
+                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                        <value name="ARG0">
+                                          <block type="text" id="272">
+                                            <field name="TEXT">clearcache</field>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="text" id="273">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="logic_boolean" id="274">
+                                        <field name="BOOL">TRUE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="component_method" id="275">
+                                    <mutation component_type="WebViewer" method_name="ClearCaches" is_generic="false" instance_name="WebViewer1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                                    <next>
+                                      <block type="component_method" id="276" inline="false">
+                                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                        <value name="ARG0">
+                                          <block type="text" id="277">
+                                            <field name="TEXT">clearcache</field>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="logic_boolean" id="278">
+                                            <field name="BOOL">FALSE</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="279" x="1436" y="-734">
+    <mutation component_type="Form" instance_name="Screen1" event_name="ErrorOccurred"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="280" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text_join" id="281" inline="false">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="282">
+                <field name="TEXT">An Error has occured. If you want further information here are some details: </field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text_join" id="283" inline="false">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="284">
+                    <field name="TEXT">Error Number: </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="lexical_variable_get" id="285">
+                    <mutation>
+                      <eventparam name="errorNumber"></eventparam>
+                    </mutation>
+                    <field name="VAR">errorNumber</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="286">
+            <field name="TEXT">Error Occured!</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="287">
+            <field name="TEXT">OK, Got it</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="297" x="1367" y="-365">
+    <mutation component_type="Button" instance_name="AboutButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">AboutButton</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="298" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="299">
+            <field name="TEXT">About</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="300" x="1190" y="-204">
+    <mutation component_type="Button" instance_name="ShareButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ShareButton</field>
+    <statement name="DO">
+      <block type="component_method" id="301" inline="false">
+        <mutation component_type="Sharing" method_name="ShareMessage" is_generic="false" instance_name="Sharing1"></mutation>
+        <field name="COMPONENT_SELECTOR">Sharing1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="304">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <field name="PROP">CurrentUrl</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="305" x="1533" y="-182">
+    <mutation component_type="Button" instance_name="SettingsButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">SettingsButton</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="306" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="307">
+            <field name="TEXT">Settings</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="288" x="765" y="-66">
+    <mutation component_type="Form" instance_name="Screen1" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_if" id="289" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="290">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="291">
+                <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                <field name="PROP">CurrentUrl</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="292">
+                <field name="TEXT">about:blank</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_closeApplication" id="293"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="294">
+            <mutation component_type="WebViewer" method_name="GoBack" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <next>
+              <block type="component_set_get" id="295" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="component_set_get" id="296">
+                    <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                    <field name="PROP">CurrentUrl</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="310" x="355" y="-18">
+    <mutation component_type="Button" instance_name="GoButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">GoButton</field>
+    <statement name="DO">
+      <block type="controls_if" id="311" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="text_contains" id="312">
+            <value name="TEXT">
+              <block type="component_set_get" id="313">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="PIECE">
+              <block type="text" id="314">
+                <field name="TEXT">http://</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="ELSE">
+          <block type="component_set_get" id="315" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+            <field name="COMPONENT_SELECTOR">TextBox1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text_join" id="316" inline="false">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="317">
+                    <field name="TEXT">http://</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="component_set_get" id="318">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="319" inline="false">
+            <value name="IF0">
+              <block type="math_compare" id="320">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="321">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="322">
+                    <field name="TEXT">http://youtube.com</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="323" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="324">
+                    <field name="TEXT">http://google.com</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="325" inline="false">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Notifier1</field>
+                    <value name="ARG0">
+                      <block type="text" id="326">
+                        <field name="TEXT">Hi user, you can't access youtube.com right now. Google doesn't allow that for us. Sorry.</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="327">
+                        <field name="TEXT">Access Denied</field>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block type="text" id="328">
+                        <field name="TEXT">Understood, thanks</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="329" inline="false">
+                <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="330">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="331">
+                    <mutation component_type="TextBox" method_name="HideKeyboard" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <next>
+                      <block type="component_set_get" id="332" inline="false">
+                        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="component_set_get" id="333">
+                            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                            <field name="PROP">CurrentUrl</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="308" x="1578" y="-49">
+    <mutation component_type="Button" instance_name="micbutton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">micbutton</field>
+    <statement name="DO">
+      <block type="component_method" id="309">
+        <mutation component_type="SpeechRecognizer" method_name="GetText" is_generic="false" instance_name="SpeechRecognizer1"></mutation>
+        <field name="COMPONENT_SELECTOR">SpeechRecognizer1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="334" x="1179" y="143">
+    <mutation component_type="Button" instance_name="BackButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BackButton</field>
+    <statement name="DO">
+      <block type="component_set_get" id="335" inline="false">
+        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="336">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <field name="PROP">CurrentUrl</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="337">
+            <mutation component_type="WebViewer" method_name="GoBack" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <next>
+              <block type="component_set_get" id="338" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="component_set_get" id="339">
+                    <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                    <field name="PROP">CurrentUrl</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="340" x="1399" y="296">
+    <mutation component_type="Button" instance_name="ForwardButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ForwardButton</field>
+    <statement name="DO">
+      <block type="component_set_get" id="341" inline="false">
+        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="342">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <field name="PROP">CurrentUrl</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="343">
+            <mutation component_type="WebViewer" method_name="GoForward" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <next>
+              <block type="component_set_get" id="344" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="component_set_get" id="345">
+                    <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                    <field name="PROP">CurrentUrl</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="350" x="-80" y="516">
+    <mutation component_type="SpeechRecognizer" instance_name="SpeechRecognizer1" event_name="AfterGettingText"></mutation>
+    <field name="COMPONENT_SELECTOR">SpeechRecognizer1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="351" inline="false">
+        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="352">
+            <mutation>
+              <eventparam name="result"></eventparam>
+            </mutation>
+            <field name="VAR">result</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="353" inline="false">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="text_contains" id="354">
+                <value name="TEXT">
+                  <block type="component_set_get" id="355">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="PIECE">
+                  <block type="text" id="356">
+                    <field name="TEXT">http://</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="ELSE">
+              <block type="component_set_get" id="357" inline="false">
+                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                <field name="COMPONENT_SELECTOR">TextBox1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text_join" id="358" inline="false">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="359">
+                        <field name="TEXT">http://</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="component_set_get" id="360">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="361" inline="false">
+                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="362">
+                        <field name="TEXT">mic</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="component_set_get" id="363">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="364" inline="false">
+                <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                <value name="ARG0">
+                  <block type="component_method" id="365" inline="false">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="366">
+                        <field name="TEXT">mic</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="367">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="368" inline="false">
+                    <value name="IF0">
+                      <block type="math_compare" id="369">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="lexical_variable_get" id="370">
+                            <mutation>
+                              <eventparam name="result"></eventparam>
+                            </mutation>
+                            <field name="VAR">result</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="text" id="371">
+                            <field name="TEXT">http://youtube.com</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_set_get" id="372" inline="false">
+                        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TextBox1</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="373">
+                            <field name="TEXT">http://google.com</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="374" inline="false">
+                            <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                            <value name="ARG0">
+                              <block type="text" id="375">
+                                <field name="TEXT">http://google.com</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_method" id="376" inline="false">
+                                <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                                <field name="COMPONENT_SELECTOR">Notifier1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="377">
+                                    <field name="TEXT">Hi user, you can't access youtube.com right now. Google doesn't allow that for us. Sorry.</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="378">
+                                    <field name="TEXT">Access Denied</field>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block type="text" id="379">
+                                    <field name="TEXT">Understood, thanks</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="346" x="1145" y="529">
+    <mutation component_type="Button" instance_name="search_engine_button" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">search_engine_button</field>
+    <statement name="DO">
+      <block type="component_method" id="347">
+        <mutation component_type="WebViewer" method_name="GoHome" is_generic="false" instance_name="WebViewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+        <next>
+          <block type="component_set_get" id="348" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+            <field name="COMPONENT_SELECTOR">TextBox1</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="component_set_get" id="349">
+                <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+                <field name="COMPONENT_SELECTOR">WebViewer1</field>
+                <field name="PROP">CurrentUrl</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="380" x="1109" y="696">
+    <mutation component_type="TextBox" instance_name="TextBox1" event_name="LostFocus"></mutation>
+    <field name="COMPONENT_SELECTOR">TextBox1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="381" inline="false">
+        <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
+        <field name="COMPONENT_SELECTOR">TextBox1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="382">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <field name="PROP">CurrentUrl</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="383" x="1331" y="897">
+    <mutation component_type="Button" instance_name="Reload_Button" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Reload_Button</field>
+    <statement name="DO">
+      <block type="component_method" id="384" inline="false">
+        <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+        <field name="COMPONENT_SELECTOR">WebViewer1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="385">
+            <mutation component_type="WebViewer" set_or_get="get" property_name="CurrentUrl" is_generic="false" instance_name="WebViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">WebViewer1</field>
+            <field name="PROP">CurrentUrl</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
+</xml>

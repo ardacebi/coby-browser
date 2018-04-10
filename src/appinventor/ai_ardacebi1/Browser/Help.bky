@@ -1,0 +1,237 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1" x="96" y="36">
+    <mutation component_type="Form" instance_name="Help" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Help</field>
+    <statement name="DO">
+      <block type="controls_if" id="2" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="math_compare" id="3">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_method" id="4" inline="false">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="5">
+                    <field name="TEXT">showstatusbar</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="6">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_boolean" id="7">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="8" inline="false">
+            <mutation component_type="Form" set_or_get="set" property_name="ShowStatusBar" is_generic="false" instance_name="Help"></mutation>
+            <field name="COMPONENT_SELECTOR">Help</field>
+            <field name="PROP">ShowStatusBar</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="9">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_set_get" id="10" inline="false">
+            <mutation component_type="Form" set_or_get="set" property_name="ShowStatusBar" is_generic="false" instance_name="Help"></mutation>
+            <field name="COMPONENT_SELECTOR">Help</field>
+            <field name="PROP">ShowStatusBar</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="11">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="12" x="853" y="60">
+    <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="component_method" id="13" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="14">
+            <field name="TEXT">Using less-low-quality images and deleting unnecessary files from the project reduces the size of the app. And besides this, Coby Browser is also an app based on text, and not graphics. So, it does not need very media files to store inside the app.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="15">
+            <field name="TEXT">How is the app so small in size?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="16">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="17" x="872" y="213">
+    <mutation component_type="Button" instance_name="Button5" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button5</field>
+    <statement name="DO">
+      <block type="component_method" id="18" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="19">
+            <field name="TEXT">Because the current SDK will not allow that for us to do.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="20">
+            <field name="TEXT">Why doesn't the enter button works for searching?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="21">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="22" x="109" y="304">
+    <mutation component_type="Button" instance_name="Button3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button3</field>
+    <statement name="DO">
+      <block type="component_method" id="23" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="24">
+            <field name="TEXT">Material Design Development has started. Stay tuned for the next big release.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="25">
+            <field name="TEXT">Why are the elements are not material design?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="26">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="27" x="575" y="413">
+    <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="component_method" id="28" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="29">
+            <field name="TEXT">No, the app is not currently open source. We currently not plan to make it open source.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="30">
+            <field name="TEXT">Is Coby Browser open source?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="31">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="f{u@-?w*}#k9L:FI{flh" x="97" y="501">
+    <mutation component_type="Button" instance_name="Button6" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button6</field>
+    <statement name="DO">
+      <block type="component_method" id="^3!tAe6R`n!`P@-h?mO-" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="S{%~8Hzc[hGrW.hEf2jO">
+            <field name="TEXT">Becuase of an issue with the current SDK. With the next big release, this issue will be resolved.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="|w8uj*LuPq7Uj_L73li1">
+            <field name="TEXT">Why are web pages loading slowly?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="*W56,K--Y)+S{o32a1r/">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="32" x="578" y="558">
+    <mutation component_type="Button" instance_name="Button4" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button4</field>
+    <statement name="DO">
+      <block type="component_method" id="33" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="34">
+            <field name="TEXT">Coby Browser was found and buiilt by Arda Çebi in 2016, February. In a school lesson teacher told us about App Inventor and I remembered that I once used it on some projects. After telling the teacher that I know using the platform, my teacher guided me about some app ideas while other were doing basic apps like weather etc. Than, thanks to an idea that came to me while I was in the school bus Coby Browser is here with us today. The name was just random. It came to my mind the word "Coby" than I added browser and it was it.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="35">
+            <field name="TEXT">When/How was Coby Browser founded?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="36">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="JCc!Vi6ap9D-!]v[ZK/b" x="93" y="696">
+    <mutation component_type="Button" instance_name="Button7" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button7</field>
+    <statement name="DO">
+      <block type="component_method" id="Ra$ST/,BynPxg#$|Oz{R" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="tt3@4C{_NOeZjk.y#Ndy">
+            <field name="TEXT">Because the current SDK does not allow us. With the next release this issue will be resolved.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id=";EkGAHB$},b2wKj]-C#$">
+            <field name="TEXT">When when I pull down the page will not refresh?</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="J^vKxNWQBzA7KIS^~O+g">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>
