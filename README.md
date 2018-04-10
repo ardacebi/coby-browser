@@ -30,11 +30,7 @@ An open source browser that you can contribute to.
 ## Contributing
 1. Fork this repo.
 2. Download source as .zip file.
-3. Rename file from CobyBrowser.zip to CobyBrowser.aia
-4. Upload the .aia folder to MIT App Inventor (ai2.appinventor.mit.edu)
-5. Make your changes.
-6. Export your files as .aia from MIT App Inventor.
-7. Change file name from Browser.aia to Browser.zip
-8. Unzip file
-9. Get all files and upload them to your forked repo
-10. Open a PR and submit your files and describe all your changes.
+3. Unzip file
+4. Find the Browser.aia file inside the unzipped folder.
+5. Go to MIT App Inventor and important the .aia file.
+6. Upload the aia to your forked repo and create a PR.
