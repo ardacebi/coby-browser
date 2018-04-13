@@ -142,7 +142,7 @@
         <field name="COMPONENT_SELECTOR">Notifier1</field>
         <value name="ARG0">
           <block type="text" id="29">
-            <field name="TEXT">No, the app is not currently open source. We currently not plan to make it open source.</field>
+            <field name="TEXT">Yes, Coby Browser is open source, it can be found on GitHub & you can contribute.</field>
           </block>
         </value>
         <value name="ARG1">
