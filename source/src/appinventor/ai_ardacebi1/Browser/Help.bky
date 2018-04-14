@@ -192,7 +192,7 @@
         <field name="COMPONENT_SELECTOR">Notifier1</field>
         <value name="ARG0">
           <block type="text" id="34">
-            <field name="TEXT">Coby Browser was found and buiilt by Arda Çebi in 2016, February. In a school lesson teacher told us about App Inventor and I remembered that I once used it on some projects. After telling the teacher that I know using the platform, my teacher guided me about some app ideas while other were doing basic apps like weather etc. Than, thanks to an idea that came to me while I was in the school bus Coby Browser is here with us today. The name was just random. It came to my mind the word "Coby" than I added browser and it was it.</field>
+            <field name="TEXT">Coby Browser was found and built by Arda Çebi in 2016, February. In a school lesson teacher told us about App Inventor and I remembered that I once used it on some projects. After telling the teacher that I know using the platform, my teacher guided me about some app ideas while other were doing basic apps like weather etc. Then, thanks to an idea that came to me while I was in the school bus Coby Browser is here with us today. The name was just random. It came to my mind the word "Coby" than I added browser and it was it.</field>
           </block>
         </value>
         <value name="ARG1">
