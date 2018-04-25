@@ -4,7 +4,7 @@ An open source browser that you can contribute to.
 ## Features
 - Dark and Light themes for the night.
 - Automatic theme selection to choose the theme depending on the time.
-- Small app size (3MB)
+- Small app size (7.18 MB)
 - Set preferred search engine to search always with your favorite one.
 - Voice Search to search with your voice, faster than keyboard.
 - Immersive mode to hide status bar and focus on your main content.
