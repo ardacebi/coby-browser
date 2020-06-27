@@ -40,5 +40,5 @@ An open source browser that you can contribute to.
 2. Download source as .zip file.
 3. Unzip file
 4. Find the Browser.aia file inside the unzipped folder.
-5. Go to MIT App Inventor and important the .aia file.
+5. Go to MIT App Inventor and import the .aia file.
 6. Upload the aia to your forked repo and create a PR.
